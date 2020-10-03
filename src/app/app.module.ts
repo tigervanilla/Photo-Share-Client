@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Apollo } from 'apollo-angular';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GraphQLModule,
   ],
-  providers: [],
+  providers: [Apollo],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
