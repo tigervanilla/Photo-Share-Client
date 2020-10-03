@@ -1,0 +1,14 @@
+<p *ngIf="loading; else doneLoading">Loading Users...</p>
+
+<ng-template #doneLoading>
+    <p>Total Users = {{totalUsers}}</p>
+
+    <table>
+        <thead>
+            <tr><td>Name</td><td>githubLogin</td></tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList"><td>{{user.name?user.name:'John Doe'}}</td><td>{{user.githubLogin}}</td></tr>
+        </tbody>
+    </table>
+</ng-template>

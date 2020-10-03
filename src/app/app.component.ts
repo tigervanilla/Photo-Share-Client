@@ -10,26 +10,31 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   title = 'photo-share-client';
-  userList = [];
+  totalUsers: number;
+  totalPhotos: number;
 
   constructor(private apollo: Apollo) {}
 
   async ngOnInit() {
-    this.userList = await this.fetchAllUsers();
+    try {
+      const result = await this.fetchUserAndPhotoCount();
+      this.totalPhotos = result.totalPhotos;
+      this.totalUsers = result.totalUsers;
+      console.log(`Total Photos=${this.totalPhotos}\nTotal Users=${this.totalUsers}`);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  fetchAllUsers() {
+  fetchUserAndPhotoCount() {
     const query = gql`
-      query GetAllUsers {
-        allUsers {
-          name
-          githubLogin
-          avatar
-        }
+      query UserAndPhotoCount {
+        totalUsers
+        totalPhotos
       }
     `;
     return this.apollo.query<any>({query})
-    .pipe(map(({data}) => data.allUsers))
+    .pipe(map(({data}) => data))
     .toPromise();
   }
 }
