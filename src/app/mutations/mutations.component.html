@@ -1,0 +1,9 @@
+<p *ngIf="processing; else doneProcessing">Processing...</p>
+
+<ng-template #doneProcessing>
+    <input #count type="number" value="1" placeholder="How many?">
+    <button (click)="addFakeUsers(count.value)">Create Fake Users</button>
+    <ul>
+        <li *ngFor="let fakeUser of fakeUsersAdded">{{fakeUser.name}} - {{fakeUser.githubLogin}}</li>
+    </ul>
+</ng-template>

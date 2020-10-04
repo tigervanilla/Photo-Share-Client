@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Apollo } from 'apollo-angular';
 import { GraphQLModule } from './GraphQL/graphql.module';
-import { QueriesComponent } from './users/queries.component';
+import { QueriesComponent } from './queries/queries.component';
+import { MutationsComponent } from './mutations/mutations.component';
+import { AuthorizeUserComponent } from './authorize-user/authorize-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QueriesComponent
+    QueriesComponent,
+    MutationsComponent,
+    AuthorizeUserComponent
   ],
   imports: [
     BrowserModule,

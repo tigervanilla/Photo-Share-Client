@@ -1,0 +1,7 @@
+<button (click)="requestCode()" [disabled]="signingIn">Sign In With GitHub</button>
+<button (click)="logout()" [disabled]="!me || !me.githubLogin">Log Out</button>
+<p *ngIf="me && me.githubLogin">
+    Name: {{ me?.name }} <br>
+    Avatar: {{ me?.avatar }} <br>
+    GitHubLogin: {{ me?.githubLogin }} <br>
+</p>
