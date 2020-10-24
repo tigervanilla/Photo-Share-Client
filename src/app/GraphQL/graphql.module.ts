@@ -15,7 +15,7 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   });
 
   return {
-    link: ApolloLink.from([authMiddleware, httpLink.create({uri})]),
+    link: ApolloLink.from([authMiddleware, httpLink.create({uri, useMultipart: true })]),
     cache: new InMemoryCache(),
   };
 }

@@ -1,0 +1,2 @@
+<input #fileInput type="file" accept=".jpg" (change)="onFileAdded($event.target)">
+<button [disabled]="!canUpload" (click)="upload()">Upload</button>
