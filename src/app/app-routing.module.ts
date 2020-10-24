@@ -4,6 +4,7 @@ import { AuthorizeUserComponent } from './authorize-user/authorize-user.componen
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { MutationsComponent } from './mutations/mutations.component';
 import { QueriesComponent } from './queries/queries.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'addFakeUsers',  component: MutationsComponent},
   {path: 'authorize', component: AuthorizeUserComponent},
   {path: 'fileUpload', component: FileUploadComponent},
+  {path: 'subscription', component: SubscriptionComponent},
 ];
 
 @NgModule({

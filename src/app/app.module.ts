@@ -9,6 +9,7 @@ import { QueriesComponent } from './queries/queries.component';
 import { MutationsComponent } from './mutations/mutations.component';
 import { AuthorizeUserComponent } from './authorize-user/authorize-user.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     QueriesComponent,
     MutationsComponent,
     AuthorizeUserComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    SubscriptionComponent,
   ],
   imports: [
     BrowserModule,

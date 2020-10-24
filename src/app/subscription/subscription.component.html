@@ -1,0 +1,23 @@
+<p>Listening for new users...</p>
+<table>
+  <thead>
+      <tr><td>Name</td><td>githubLogin</td></tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of userList"><td>{{user.name}}</td><td>{{user.githubLogin}}</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<p>Listening for new photos...</p>
+<table>
+  <thead>
+      <tr><td>Name</td><td>Category</td><td>Id</td></tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let photo of photoList">
+        <td>{{photo.name}}</td><td>{{photo.category}}</td><td>{{photo.id}}</td>
+      </tr>
+  </tbody>
+</table>
