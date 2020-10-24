@@ -8,13 +8,15 @@ import { GraphQLModule } from './GraphQL/graphql.module';
 import { QueriesComponent } from './queries/queries.component';
 import { MutationsComponent } from './mutations/mutations.component';
 import { AuthorizeUserComponent } from './authorize-user/authorize-user.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QueriesComponent,
     MutationsComponent,
-    AuthorizeUserComponent
+    AuthorizeUserComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
